@@ -12,7 +12,4 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Haskell Tool Stack (1)" project-jdk-type="Haskell Tool Stack SDK" />
-  <component name="ScalaSbtSettings">
-    <option name="customVMPath" />
-  </component>
 </project>

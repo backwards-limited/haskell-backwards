@@ -47,6 +47,7 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
+.idea
 out/
 
 # mpeltonen/sbt-idea plugin
@@ -89,3 +90,8 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+.vscode
+
+learning-path-haskell-functional-programming/Fundamentals*
+learning-path-haskell-functional-programming/Learning*
