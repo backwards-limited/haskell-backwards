@@ -2,6 +2,8 @@
 
 Haskell functionality showing example usage while covering Haskell courses, such as:
 
+- [Learning Path Haskell Functional Programming](https://www.udemy.com/learning-path-haskell-functional-programming-and-haskell)
+
 - [Get Programming Haskell](https://www.manning.com/books/get-programming-with-haskell)
 
 ## Table of Contents
