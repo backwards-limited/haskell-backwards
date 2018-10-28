@@ -1,13 +1,19 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 module Data (
+  MarcRecordRaw, MarcLeaderRaw,
   Html, Author, Title,
   Book(Book, title, author),
+  leaderLength,
   book1, book2, book3,
   books
 ) where
 
+import qualified Data.ByteString as B
 import qualified Data.Text as T  
+
+type MarcRecordRaw = B.ByteString
+type MarcLeaderRaw = B.ByteString
 
 type Html = T.Text
 
@@ -18,6 +24,9 @@ data Book = Book {
   author :: Author,
   title :: Title
 } deriving Show
+
+leaderLength :: Int
+leaderLength = 24
 
 book1 :: Book
 book1 = Book {

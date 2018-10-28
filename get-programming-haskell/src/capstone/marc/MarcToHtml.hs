@@ -27,5 +27,14 @@ booksToHtml books =
   ]
   where booksHtml = (mconcat . (map bookToHtml)) books
 
+getLeader :: MarcRecordRaw -> MarcLeaderRaw
+getLeader record = B.take leaderLength record
+
+rawToInt :: B.ByteString -> Int
+rawToInt = (read . T.unpack . E.decodeUtf8)
+
+getRecordLength :: MarcLeaderRaw -> Int
+getRecordLength leader = rawToInt (B.take 5 leader)
+
 main :: IO ()
 main = TIO.writeFile "books.html" (booksToHtml books)
