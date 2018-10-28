@@ -1,10 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 module Data (
-  MarcRecordRaw, MarcLeaderRaw,
+  MarcRecordRaw, MarcLeaderRaw, MarcDirectoryRaw, MarcDirectoryEntryRaw,
+  FieldText,
   Html, Author, Title,
+  FieldMetadata(FieldMetadata, tag, fieldLength, fieldStart),
   Book(Book, title, author),
-  leaderLength,
+  leaderLength, dirEntryLength,
+  fieldDelimiter, titleTag, titleSubfield, authorTag, authorSubfield,
   book1, book2, book3,
   books
 ) where
@@ -14,11 +17,21 @@ import qualified Data.Text as T
 
 type MarcRecordRaw = B.ByteString
 type MarcLeaderRaw = B.ByteString
+type MarcDirectoryRaw = B.ByteString
+type MarcDirectoryEntryRaw = B.ByteString
+
+type FieldText = T.Text
 
 type Html = T.Text
 
 type Author = T.Text
 type Title = T.Text
+
+data FieldMetadata = FieldMetadata {
+  tag :: T.Text,
+  fieldLength :: Int,
+  fieldStart  :: Int
+} deriving Show
 
 data Book = Book {
   author :: Author,
@@ -27,6 +40,24 @@ data Book = Book {
 
 leaderLength :: Int
 leaderLength = 24
+
+dirEntryLength :: Int
+dirEntryLength = 12
+
+fieldDelimiter :: Char
+fieldDelimiter = toEnum 31
+
+titleTag :: T.Text
+titleTag = "245"
+
+titleSubfield :: Char
+titleSubfield = 'a'
+
+authorTag :: T.Text
+authorTag = "100"
+
+authorSubfield :: Char
+authorSubfield = 'a'
 
 book1 :: Book
 book1 = Book {
