@@ -31,9 +31,11 @@ library
   other-modules:
       Paths_get_programming_haskell
   hs-source-dirs:
-      src
+      src,
+      src/capstone/marc
   build-depends:
       base >=4.7 && <5,
+      bytestring,
       containers,
       random,
       text
