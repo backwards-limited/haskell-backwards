@@ -93,5 +93,7 @@ cabal.project.local~
 
 .vscode
 
+get-programming-haskell/src/capstone/marc/sample.mrc
+
 learning-path-haskell-functional-programming/Fundamentals*
 learning-path-haskell-functional-programming/Learning*
