@@ -14,8 +14,9 @@ Haskell functionality showing example usage while covering Haskell courses, such
 
 - [Language Extension](docs/language-extension.md)
 
-- [Modules](docs/modules.md)
+- [Functional Programming](docs/functional-programming.md)
 
 - Courses (module per course)
   - [Learning Path Haskell Functional Programming](learning-path-haskell-functional-programming/README.md)
+  
   - [Get Programming Haskell](get-programming-haskell/README.md)
